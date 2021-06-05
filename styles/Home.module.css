@@ -44,12 +44,7 @@
   color: white;
   position: sticky;
   top: 0;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, rgb(81, 74, 157), #2489dc);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #514A9D, #2489dc);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #2489dc;
   z-index: 1;
 }
 
@@ -58,11 +53,11 @@
   position: relative;
   flex: 2;
   display: flex;
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   align-content: flex-start;
   margin: 1em 0 1em 0;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   cursor: default;
   z-index: 1;
 }
@@ -81,7 +76,12 @@
   text-decoration: underline;
 }
 
-
+.contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
 
 .code {
   background: #fafafa;
@@ -128,18 +128,62 @@
 .card p {
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.5;
+  /* line-height: 1.5em; */
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.textoBienvenida {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-top: 10vh;
+  margin-left: 7%;
+  align-self: center;
+  z-index: 1;
+  color: white;
+}
+
+.welcome {
+  font-size: 72px;
+}
+
+.submensaje {
+  margin-top: -1.2em;
+}
+
+.submensaje h4 {
+  font-size: 1.3em;
+  line-height: 0.4em;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 426px) {
+  .conGradiente,
+  .encabezado {
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .enlaces,
+  .title {
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  .submensaje {
+    font-size: 12px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
 
   .grandiente {
-    margin-top: -7em;
+    margin-top: -7.9em;
     height: 100vh;
   }
 
@@ -161,11 +205,31 @@
     margin-left: auto;
   }
 
+  .textoBienvenida {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 0.2em;
+  }
+
+  .welcome {
+    font-size: 48px;
+    position: relative;
+  }
+
+  .submensaje {
+    font-size: 0.85em;
+    text-align: center;
+  }
+
+
 }
 
 @media only screen and (min-width:601px) and (max-width:900px) {
   .title {
     margin-left: 4%;
+    font-size: 1.2em;
   }
 
   .conGradiente,
@@ -175,11 +239,29 @@
     top: 0;
     z-index: 1;
   }
+
+  .enlaces a {
+    font-size: 1em;
+  }
+
+  .welcome {
+    font-size: 48px;
+  }
+
+  .textoBienvenida {
+    margin-top: 18vh;
+  }
+
+  .submensaje h4 {
+    font-size: 1em;
+  }
+
 }
 
 @media only screen and (min-width:901px) {
   .title {
     margin-left: 8%;
+    /* font-size: 1.3em; */
   }
 
   .enlaces {
@@ -187,4 +269,20 @@
     display: flex;
     margin: auto;
   }
+
+  .submensaje {
+    font-size: 1em;
+
+  }
+
+  .textoBienvenida {
+    right: 48%;
+    margin-bottom: -1em;
+  }
+
+  /* .textoBienvenida span {
+    width: 110%;
+  } */
+
+
 }
