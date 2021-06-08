@@ -18,8 +18,6 @@
   height: 30vh;
   width: 100%;
   color: white;
-  line-height: 1.5em;
-  background-color: rgba(84, 38, 211, 0.137, 0.72);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -30,78 +28,60 @@
   flex-direction: row;
   margin-top: -6.5em;
   width: 100%;
-  height: 35vh;
-  background: #2489dc;
+  height: 104.3vh;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #514A9D, #2489dc);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #514A9D, #2489dc);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  z-index: -1;
+  z-index: -2;
 }
 
 .conGradiente {
-  flex: 1;
   display: flex;
   flex-direction: row;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 100vw;
+  width: 100%;
   color: white;
   position: sticky;
   top: 0;
   background: #2489dc;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, rgb(81, 74, 157), #2489dc);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #514A9D, #2489dc);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   z-index: 1;
 }
 
 
 .title {
+  position: relative;
   flex: 2;
   display: flex;
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   align-content: flex-start;
-  margin: 1em 0 1em 0; 
-  letter-spacing: 0.1em;
+  margin: 1em 0 1em 0;
+  letter-spacing: 0.08em;
   cursor: default;
+  z-index: 1;
 }
 
 
-.enlaces {
-  /* flex: 1; */
-  padding-right: 5%;
-  display: flex;
-  margin: auto;
-}
 
 .enlaces a {
   margin: 0 1.5em 0 1.5em;
   font-size: 1.1em;
-  /* font-weight: 700; */
   letter-spacing: 0.05em;
 }
 
 .enlaces a:hover {
   cursor: pointer;
   text-decoration: underline;
-  /* color: #005cc5; */
 }
 
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .code {
@@ -149,17 +129,36 @@
 .card p {
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;   
+.textoBienvenida {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: fixed;
 }
+
+.welcome {
+  font-size: 72px;
+}
+
+
+.submensaje h4 {
+  font-size: 2vw;
+  line-height: 0.4em;
+  font-weight: 400;
+}
+
+
 
 @media only screen and (max-width: 600px) {
-   
-  .conGradiente,    
+
+  .grandiente {
+    margin-top: -7.9em;
+    height: 100vh;
+  }
+
+  .conGradiente,
   .encabezado {
     align-items: center;
     flex-direction: column;
@@ -176,17 +175,58 @@
     margin-left: auto;
   }
 
-}
-
-@media only screen and (min-width:601px) and (max-width:1100px) {
-  .enlaces {
+  .contenedor {
     flex: 1;
-    /* padding-right: 0.5em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .title{
-    /* flex: 2; */
+  .textoBienvenida {
+    flex: 1;
+    align-items: center;
+    margin-bottom: 25vw;
+  }
+
+  .welcome {
+    font-size: 32px;
+    position: relative;
+  }
+
+  .submensaje {
+    flex: 1;
+    display: flex;
+  }
+
+  .submensaje h4 {
+    width: 90vw;
+    font-size: 0.85em;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: center 65vh;
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    width: 100%;
+  }
+
+
+  .bloqueTransparente {
+    height: 100vh;
+  }
+
+
+}
+
+@media only screen and (min-width:601px) and (max-width:1024px) {
+  .title {
     margin-left: 4%;
+    font-size: 1.2em;
   }
 
   .conGradiente,
@@ -196,11 +236,132 @@
     top: 0;
     z-index: 1;
   }
+
+  .enlaces a {
+    font-size: 1em;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 28vw;
+    width: 100%;
+  }
+
+
+  .bloqueTransparente {
+    height: 108vh;
+  }
+
+  .welcome {
+    font-size: 6vw;
+    margin-bottom: -0.5em;
+  }
+
+  .textoBienvenida {
+    margin-left: 7%;
+    margin-top: 10vh;
+  }
+
+  .submensaje h4 {
+    width: 50vw;
+    font-size: 1em;
+    line-height: normal;
+    text-align: left;
+  }
 }
 
-@media only screen and (min-width:1101px) {
+@media only screen and (min-width:1024.1px) and (max-width: 1440px) {
   .title {
-    margin-left: 3em;
-    padding-left: 2em;
+    margin-left: 8%;
   }
+
+  .enlaces {
+    padding-right: 4%;
+    display: flex;
+    margin: auto;
+  }
+
+
+  .textoBienvenida {
+    margin-left: 7em;
+    margin-top: 3em;
+  }
+
+  .welcome {
+    font-size: 60px !important;
+    margin-bottom: -0.5em;
+  }
+
+  .submensaje h4 {
+    width: 35vw;
+    font-size: 1.2rem;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    width: 100%;
+  }
+
+  .bloqueTransparente {
+    height: 108vh;
+  }
+
+}
+
+
+@media only screen and (min-width:1440.1px) {
+  .title {
+    margin-left: 8%;
+  }
+
+  .enlaces {
+    padding-right: 4%;
+    display: flex;
+    margin: auto;
+  }
+
+
+  .welcome {
+    font-size: 80px !important;
+    margin-bottom: -0.5em;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    background-size: 22rem;
+    width: 100%;
+  }
+
+  .bloqueTransparente {
+    height: 108vh;
+  }
+
+  .textoBienvenida {
+    margin-left: 8em;
+    margin-top: 2em;
+  }
+
+
+  .submensaje h4 {
+    width: 25em;
+    font-size: 1.3em;
+    line-height: normal;
+    text-align: left;
+  }
+
 }

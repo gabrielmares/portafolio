@@ -22,7 +22,7 @@ function useWindowSize() {
         function handleResize() {
             // Set window width/height to state
             setWindowSize({
-                width: window.scrollX,
+                width: window.innerWidth,
                 height: window.scrollY,
             });
         }

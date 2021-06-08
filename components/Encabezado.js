@@ -1,14 +1,21 @@
+import { useEffect, useState } from 'react';
 import { useWindow } from '../hook/useWindow';
 import styles from '../styles/Home.module.css'
 
 
 const Encabezado = () => {
+    const [estilo, setEstilo] = useState()
     const { height } = useWindow()
-    const estilosEncabezado = height > 89 ? styles.conGradiente : styles.encabezado
-    // console.log(height)
+
+    useEffect(() => {
+        const estilosEncabezado = (height * 1.5 >= window.innerHeight) ? styles.conGradiente : styles.encabezado
+        setEstilo(estilosEncabezado)
+    }, [height])
+
+
     return (
-        <nav className={estilosEncabezado} >
-            <span className={styles.title}>Gabriel Mares</span>
+        <nav className={estilo} >
+            <h3 className={styles.title}>Gabriel Mares</h3>
             <ul className={styles.enlaces}>
                 <a>About</a>
                 <a>Proyects</a>
