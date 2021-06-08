@@ -34,7 +34,7 @@
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #514A9D, #2489dc);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  z-index: -1;
+  z-index: -2;
 }
 
 .conGradiente {
@@ -64,7 +64,6 @@
 
 
 
-
 .enlaces a {
   margin: 0 1.5em 0 1.5em;
   font-size: 1.1em;
@@ -80,7 +79,9 @@
   flex: 1;
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 100vh;
+  width: 100%;
 }
 
 .code {
@@ -128,57 +129,27 @@
 .card p {
   margin: 0;
   font-size: 1.25rem;
-  /* line-height: 1.5em; */
 }
 
 .textoBienvenida {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  text-align: start;
-  margin-top: 10vh;
-  margin-left: 7%;
-  align-self: center;
-  z-index: 1;
   color: white;
+  position: fixed;
 }
 
 .welcome {
   font-size: 72px;
 }
 
-.submensaje {
-  margin-top: -1.2em;
-}
 
 .submensaje h4 {
-  font-size: 1.3em;
+  font-size: 2vw;
   line-height: 0.4em;
   font-weight: 400;
 }
 
-@media only screen and (max-width: 426px) {
-  .conGradiente,
-  .encabezado {
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
 
-  .enlaces,
-  .title {
-    padding-right: 0;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-
-  .submensaje {
-    font-size: 12px !important;
-  }
-}
 
 @media only screen and (max-width: 600px) {
 
@@ -186,7 +157,6 @@
     margin-top: -7.9em;
     height: 100vh;
   }
-
 
   .conGradiente,
   .encabezado {
@@ -205,28 +175,55 @@
     margin-left: auto;
   }
 
+  .contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .textoBienvenida {
     flex: 1;
-    flex-direction: column;
     align-items: center;
-    margin-left: 0;
-    margin-bottom: 0.2em;
+    margin-bottom: 25vw;
   }
 
   .welcome {
-    font-size: 48px;
+    font-size: 32px;
     position: relative;
   }
 
   .submensaje {
+    flex: 1;
+    display: flex;
+  }
+
+  .submensaje h4 {
+    width: 90vw;
     font-size: 0.85em;
+    line-height: normal;
     text-align: center;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: center 65vh;
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    width: 100%;
+  }
+
+
+  .bloqueTransparente {
+    height: 100vh;
   }
 
 
 }
 
-@media only screen and (min-width:601px) and (max-width:900px) {
+@media only screen and (min-width:601px) and (max-width:1024px) {
   .title {
     margin-left: 4%;
     font-size: 1.2em;
@@ -244,24 +241,42 @@
     font-size: 1em;
   }
 
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 28vw;
+    width: 100%;
+  }
+
+
+  .bloqueTransparente {
+    height: 108vh;
+  }
+
   .welcome {
-    font-size: 48px;
+    font-size: 6vw;
+    margin-bottom: -0.5em;
   }
 
   .textoBienvenida {
-    margin-top: 18vh;
+    margin-left: 7%;
+    margin-top: 10vh;
   }
 
   .submensaje h4 {
+    width: 50vw;
     font-size: 1em;
+    line-height: normal;
+    text-align: left;
   }
-
 }
 
-@media only screen and (min-width:901px) {
+@media only screen and (min-width:1024.1px) and (max-width: 1440px) {
   .title {
     margin-left: 8%;
-    /* font-size: 1.3em; */
   }
 
   .enlaces {
@@ -270,19 +285,83 @@
     margin: auto;
   }
 
-  .submensaje {
-    font-size: 1em;
 
+  .textoBienvenida {
+    margin-left: 7em;
+    margin-top: 3em;
+  }
+
+  .welcome {
+    font-size: 60px !important;
+    margin-bottom: -0.5em;
+  }
+
+  .submensaje h4 {
+    width: 35vw;
+    font-size: 1.2rem;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    width: 100%;
+  }
+
+  .bloqueTransparente {
+    height: 108vh;
+  }
+
+}
+
+
+@media only screen and (min-width:1440.1px) {
+  .title {
+    margin-left: 8%;
+  }
+
+  .enlaces {
+    padding-right: 4%;
+    display: flex;
+    margin: auto;
+  }
+
+
+  .welcome {
+    font-size: 80px !important;
+    margin-bottom: -0.5em;
+  }
+
+  .imagenScroll {
+    position: relative;
+    background: url('/express.png');
+    background-attachment: fixed;
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    background-size: 22rem;
+    width: 100%;
+  }
+
+  .bloqueTransparente {
+    height: 108vh;
   }
 
   .textoBienvenida {
-    right: 48%;
-    margin-bottom: -1em;
+    margin-left: 8em;
+    margin-top: 2em;
   }
 
-  /* .textoBienvenida span {
-    width: 110%;
-  } */
 
+  .submensaje h4 {
+    width: 25em;
+    font-size: 1.3em;
+    line-height: normal;
+    text-align: left;
+  }
 
 }

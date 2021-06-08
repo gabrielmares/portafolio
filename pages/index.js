@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Encabezado from '../components/Header'
-import BackGroundPage from '../components/BackGroundDefault'
+import Encabezado from '../components/Encabezado'
+import BackGroundPage from '../components/FondoPrincipal'
 import Bienvenida from '../components/MensajeBienvenida'
-import { useWindow } from '../hook/useWindow'
+import Dispositivo from '../components/Dispositivo'
 
 export default function Home() {
 
-  const { height } = useWindow();
 
   return (
     <div className={styles.container}>
@@ -20,8 +19,9 @@ export default function Home() {
       <main className={styles.main}>
         <Encabezado />
         <BackGroundPage>
-          <div className={styles.contenedor} style={{ marginTop: height }}>
+          <div className={styles.contenedor}>
             <Bienvenida />
+            <Dispositivo />
           </div>
         </BackGroundPage>
 

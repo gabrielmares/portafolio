@@ -8,7 +8,7 @@ const Encabezado = () => {
     const { height } = useWindow()
 
     useEffect(() => {
-        const estilosEncabezado = (height * 1.3 >= window.innerHeight) ? styles.conGradiente : styles.encabezado
+        const estilosEncabezado = (height * 1.5 >= window.innerHeight) ? styles.conGradiente : styles.encabezado
         setEstilo(estilosEncabezado)
     }, [height])
 
