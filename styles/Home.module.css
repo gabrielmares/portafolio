@@ -28,7 +28,7 @@
   flex-direction: row;
   margin-top: -6.5em;
   width: 100%;
-  height: 104.3vh;
+  height: 108vh;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #514A9D, #2489dc);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -53,10 +53,10 @@
   position: relative;
   flex: 2;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   align-content: flex-start;
-  margin: 1em 0 1em 0;
+  margin: 0.5em 0 0 0;
   letter-spacing: 0.08em;
   cursor: default;
   z-index: 1;
@@ -65,8 +65,7 @@
 
 
 .enlaces a {
-  margin: 0 1.5em 0 1.5em;
-  font-size: 1.1em;
+  font-size: 1em;
   letter-spacing: 0.05em;
 }
 
@@ -79,7 +78,7 @@
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: center;
+
   height: 100vh;
   width: 100%;
 }
@@ -149,14 +148,33 @@
   font-weight: 400;
 }
 
+.bloqueProyectos {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+
+.redes {
+  height: 81.2vh;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  background-color: #2489dc;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
 
-  .grandiente {
-    margin-top: -7.9em;
-    height: 100vh;
+  .container {
+    width: 100%;
   }
+
 
   .conGradiente,
   .encabezado {
@@ -171,8 +189,19 @@
   .enlaces,
   .title {
     padding-right: 0;
+    display: flex;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .enlaces a:first-child {
+    margin-left: 4vw;
+    margin-right: 15vw;
+  }
+
+  .enlaces a:last-child {
+    margin-left: 15vw;
+    margin-right: 4vw;
   }
 
   .contenedor {
@@ -180,6 +209,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
   .textoBienvenida {
@@ -213,11 +244,28 @@
     background-repeat: no-repeat;
     background-size: 10rem;
     width: 100%;
+
   }
 
 
   .bloqueTransparente {
+    height: 120vh;
+  }
+
+  .bloqueProyectos {
+    width: 100%;
     height: 100vh;
+  }
+
+  .bajoConstruccion {
+    display: flex;
+    align-self: center;
+    height: 15rem;
+  }
+
+  .redes {
+    height: 96vh;
+    width: 100%;
   }
 
 

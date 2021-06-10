@@ -19,27 +19,26 @@ export default function Home() {
       <main className={styles.main}>
         <Encabezado />
         <BackGroundPage>
-          <div className={styles.contenedor}>
+          <div id='about' className={styles.contenedor}>
             <Bienvenida />
             <Dispositivo />
           </div>
         </BackGroundPage>
 
 
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-
+        <div id='projects' className={styles.bloqueProyectos}>
+          <img
+            src='/underConstruction.png'
+            alt='Pagina en construccion'
+            className={styles.bajoConstruccion}
+          />
+        </div>
+        <div id='contact' className={styles.redes}>
+          <span>Lista de redes sociales disponibles</span>
+        </div>
       </main>
+
+
 
 
     </div>

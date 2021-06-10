@@ -8,18 +8,27 @@ const Encabezado = () => {
     const { height } = useWindow()
 
     useEffect(() => {
-        const estilosEncabezado = (height * 1.5 >= window.innerHeight) ? styles.conGradiente : styles.encabezado
+        const estilosEncabezado = (height * 2.5 >= window.innerHeight) ? styles.conGradiente : styles.encabezado
         setEstilo(estilosEncabezado)
     }, [height])
 
 
+    const scrollSmooth = (id) => {
+        const reference = document.getElementById(id)
+        window.scrollTo({
+            top: reference.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
+
     return (
-        <nav className={estilo} >
-            <h3 className={styles.title}>Gabriel Mares</h3>
+        <nav className={estilo}>
+            <span className={styles.title}>Gabriel Mares</span>
             <ul className={styles.enlaces}>
-                <a>About</a>
-                <a>Proyects</a>
-                <a>Contact</a>
+                <a onClick={() => scrollSmooth('about')}>About</a>
+                <a onClick={() => scrollSmooth('projects')} > Projects</a>
+                <a onClick={() => scrollSmooth('contact')}> Contact</a>
             </ul>
         </nav>
     );

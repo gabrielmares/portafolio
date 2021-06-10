@@ -16,3 +16,7 @@ const Bienvenida = () => {
 }
 
 export default Bienvenida;
+
+// About Me
+
+//  If you want to be in touch with me, feel free to do on my LinkedIn
