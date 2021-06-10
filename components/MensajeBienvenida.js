@@ -5,11 +5,12 @@ const Bienvenida = () => {
         <div className={styles.textoBienvenida}>
             <span className={styles.welcome}>Welcome!</span>
             <div className={styles.submensaje}>
-                <h4>I'm Gabriel Mares, Software Development
+                <h4>I'm Gabriel Mares, Frontend Development
                 and this is my personal site, here you can
                 find repositories and demos about my jobs. {' '}
-                Even, at the bottom you can find my resume
-                 and my social network's</h4>
+                At the bottom you will find my
+                social networks and my resume. Also, if you want to
+                be in touch with me, feel free to do. </h4>
             </div>
         </div>
     );
