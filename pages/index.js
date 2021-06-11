@@ -4,10 +4,18 @@ import Encabezado from '../components/Encabezado'
 import BackGroundPage from '../components/FondoPrincipal'
 import Bienvenida from '../components/MensajeBienvenida'
 import Dispositivo from '../components/Dispositivo'
+import { useEffect } from 'react'
+import { useWindow } from '../hook/useWindow'
 
 export default function Home() {
+  const { height } = useWindow()
 
+  useEffect(() => {
+    const posicionAcerca = document.getElementById('about').offsetTop;
+    const posicionProyectos = document.getElementById('projects').offsetTop;
+    
 
+  }, [height])
   return (
     <div className={styles.container}>
       <Head>

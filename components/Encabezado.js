@@ -6,16 +6,27 @@ import styles from '../styles/Home.module.css'
 const Encabezado = () => {
     const [estilo, setEstilo] = useState()
     const [activa, setActiva] = useState('about')
-    const { height, width } = useWindow()
-
+    const [proyectos, setProyectos] = useState()
+    const { height } = useWindow()
     useEffect(() => {
-        const estilosEncabezado = (height * 1.4 >= window.innerHeight && width <= 600 || height * 1.2 >= window.innerHeight && width > 600) ? styles.conGradiente : styles.encabezado
+        // se detecta la posicion del componente projects, es el de en medio
+        setProyectos(document.getElementById('projects').offsetTop)
+        if (proyectos / 2 > height) {
+            console.log('about')
+            setActiva('about')
+        }
+        else if (proyectos * 1.45 < height) {
+            setActiva('contact')
+        }
+        else setActiva('projects')
+        // colocamos el cambio de estilo en el encabezado, cuando el componente projects a alcanzado el top
+        const estilosEncabezado = (height > document.getElementById('projects').offsetTop - 80) ? styles.conGradiente : styles.encabezado
         setEstilo(estilosEncabezado)
+
     }, [height])
 
-
+    // funcion que hace scroll hasta donde se encuenta el componente a poner en pantalla
     const scrollSmooth = (id) => {
-        setActiva(id)
         const reference = document.getElementById(id)
         window.scrollTo({
             top: reference.offsetTop,
@@ -30,6 +41,7 @@ const Encabezado = () => {
             <ul className={styles.enlaces}>
                 <a
                     name='about'
+                    className={`${(activa === 'about') ? styles.activo : ''}`}
                     onClick={(e) => scrollSmooth(e.target.name)}
                 >
                     About
