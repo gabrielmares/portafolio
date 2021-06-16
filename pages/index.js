@@ -4,18 +4,10 @@ import Encabezado from '../components/Encabezado'
 import BackGroundPage from '../components/FondoPrincipal'
 import Bienvenida from '../components/MensajeBienvenida'
 import Dispositivo from '../components/Dispositivo'
-import { useEffect } from 'react'
-import { useWindow } from '../hook/useWindow'
+import TarjetaProyecto from '../components/TarjetaProyecto'
+import Proyectos from '../projects'
 
 export default function Home() {
-  const { height } = useWindow()
-
-  useEffect(() => {
-    const posicionAcerca = document.getElementById('about').offsetTop;
-    const posicionProyectos = document.getElementById('projects').offsetTop;
-    
-
-  }, [height])
   return (
     <div className={styles.container}>
       <Head>
@@ -35,11 +27,12 @@ export default function Home() {
 
 
         <div id='projects' className={styles.bloqueProyectos}>
-          <img
-            src='/underConstruction.png'
-            alt='Pagina en construccion'
-            className={styles.bajoConstruccion}
-          />
+          {Proyectos.map((proyecto, index) => (
+            <TarjetaProyecto
+              key={index}
+              proyecto={proyecto}
+            />
+          ))}
         </div>
         <div id='contact' className={styles.redes}>
           <span>Lista de redes sociales disponibles</span>

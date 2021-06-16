@@ -12,10 +12,9 @@ const Encabezado = () => {
         // se detecta la posicion del componente projects, es el de en medio
         setProyectos(document.getElementById('projects').offsetTop)
         if (proyectos / 2 > height) {
-            console.log('about')
             setActiva('about')
         }
-        else if (proyectos * 1.45 < height) {
+        else if (proyectos * 1.60 < height) {
             setActiva('contact')
         }
         else setActiva('projects')
