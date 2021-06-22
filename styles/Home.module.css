@@ -527,7 +527,7 @@
     text-align: left;
   }
 
-  .submensaje a{
+  .submensaje a {
     font-size: 1.2em;
   }
 
@@ -701,7 +701,7 @@
     text-align: left;
   }
 
-  .submensaje a{
+  .submensaje a {
     font-size: 1.4em;
   }
 
@@ -743,7 +743,15 @@
   .tarjetaProyectos p {
     margin-left: 0.8em;
     margin-right: 0.8em;
-    font-size: 1.4em;
+    font-size: 1.2em;
+  }
+
+  .tarjetaProyectos:hover {
+    font-size: 1.05em;
+  }
+
+  .tarjetaProyectos:hover p {
+    font-size: 1.3em;
   }
 
   .tarjetaProyectos div {

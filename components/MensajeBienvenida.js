@@ -1,3 +1,4 @@
+import Typical from 'react-typical'
 import styles from '../styles/Home.module.css'
 
 const Bienvenida = () => {
@@ -13,7 +14,12 @@ const Bienvenida = () => {
                     social networks and my resume. Also, if you want to
                     be in touch with me, feel free to do so.
                 </h4>
-                <a className={styles.scrolldown}>{' '}Scroll down to see more!</a>
+                <a className={styles.scrolldown}>{' '}</a>
+
+                <Typical
+                    steps={['Scroll down to see more!', 1000]}
+                    wrapper={'a'}
+                />
             </div>
         </div>
     );
