@@ -112,12 +112,12 @@
 
 
 .redes {
-  height: 81.2vh;
+  /* height: 81.2vh; */
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
-  background-color: #2489dc;
-  color: white;
+  background-color: white;
+  color: var(--blues);
   flex-direction: column;
   align-items: center;
 }
@@ -168,6 +168,30 @@
   border: 1px solid rgb(77, 77, 77);
   color: rgb(77, 77, 77);
 }
+
+.tarjetaProyectos:hover {
+  transform: scale(1.05);
+}
+
+
+.contactoTexto {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+.contenedorRedes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.iconoRedes {
+  font-size: 5em;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 575px) {
 
@@ -278,7 +302,7 @@
   .bloqueProyectos {
     display: flex;
     flex-flow: wrap;
-    padding-top: 7vh;
+    padding-top: 12vh;
     height: auto;
     justify-content: space-around;
   }
@@ -468,6 +492,10 @@
     margin-bottom: 0.5em;
   }
 
+  .contactoTexto {
+    font-size: 3em;
+  }
+
 
 }
 
@@ -611,6 +639,10 @@
     font-size: 1.1em !important;
   }
 
+  .contactoTexto {
+    font-size: 3em;
+    margin-bottom: 2em;
+  }
 
 }
 
@@ -628,7 +660,6 @@
     height: 7vh;
     align-items: center;
     position: sticky;
-    /* margin-top: 1em; */
     top: 0;
     z-index: 1;
   }
@@ -776,5 +807,9 @@
     font-size: 1.5em;
     width: 8vw;
     height: 1.7em;
+  }
+
+  .contactoTexto {
+    font-size: 3em;
   }
 }

@@ -5,7 +5,9 @@ import BackGroundPage from '../components/FondoPrincipal'
 import Bienvenida from '../components/MensajeBienvenida'
 import Dispositivo from '../components/Dispositivo'
 import TarjetaProyecto from '../components/TarjetaProyecto'
-import Proyectos from '../projects'
+import Proyectos, { redes } from '../projects'
+import ContactoTexto from '../components/Contacto'
+import Red from '../components/ContactoRedes'
 
 export default function Home() {
   return (
@@ -27,15 +29,23 @@ export default function Home() {
 
 
         <div id='projects' className={styles.bloqueProyectos}>
-          {Proyectos.map((proyecto, index) => (
+          {Proyectos.map((proyecto) => (
             <TarjetaProyecto
-              key={index}
+              key={proyecto.nombreAlterno}
               proyecto={proyecto}
             />
           ))}
         </div>
         <div id='contact' className={styles.redes}>
-          <span>Lista de redes sociales disponibles</span>
+          <ContactoTexto />
+          <div className={styles.contenedorRedes}>
+            {redes.map((red) => (
+              <Red
+                key={red.descripcion}
+                red={red}
+              />
+            ))}
+          </div>
         </div>
       </main>
 
