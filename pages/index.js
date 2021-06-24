@@ -41,7 +41,7 @@ export default function Home() {
           <div className={styles.contenedorRedes}>
             {redes.map((red) => (
               <Red
-                key={red.descripcion}
+                key={red.link}
                 red={red}
               />
             ))}

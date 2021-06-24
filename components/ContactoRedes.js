@@ -8,14 +8,15 @@ const Red = ({ red }) => {
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            margin: 15
         }}>
             <Icono
                 className={styles.iconoRedes}
                 style={{ color }}
                 onClick={() => open(link)}
             />
-            <label style={{ cursor: 'pointer' }}>
+            <label className={styles.linkPath}>
                 {descripcion}
             </label>
         </div>

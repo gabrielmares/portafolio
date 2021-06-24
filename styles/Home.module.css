@@ -92,6 +92,15 @@
   font-size: 72px;
 }
 
+.imagenScroll {
+  position: relative;
+  background: var(--imagenScroll);
+  background-attachment: fixed;
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  background-size: 22rem;
+  width: 100%;
+}
 
 .submensaje h4 {
   font-size: 2vw;
@@ -104,15 +113,17 @@
 }
 
 .bloqueProyectos {
+  display: flex;
+  flex-flow: wrap;
   background-color: white;
   height: 100vh;
+  justify-content: space-around;
   justify-content: center;
   align-items: center;
 }
 
 
 .redes {
-  /* height: 81.2vh; */
   display: flex;
   width: 100%;
   justify-content: center;
@@ -183,6 +194,7 @@
 .contenedorRedes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -285,13 +297,8 @@
   }
 
   .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
     background-position: center 65vh;
-    background-repeat: no-repeat;
     background-size: 50vw;
-    width: 100%;
   }
 
 
@@ -300,11 +307,10 @@
   }
 
   .bloqueProyectos {
-    display: flex;
     flex-flow: wrap;
-    padding-top: 12vh;
     height: auto;
-    justify-content: space-around;
+    padding-top: 4em;
+    justify-content: space-evenly;
   }
 
   .redes {
@@ -321,12 +327,12 @@
   }
 
   .tarjetaProyectos {
-    margin: 1em;
+    margin: 0.5em;
     display: flex;
     flex-direction: column;
     width: 12em;
     min-width: 8em;
-    height: 13em;
+    height: 13.4em;
     border: 1px solid var(--blues);
     border-radius: 5px;
   }
@@ -355,8 +361,13 @@
     margin-bottom: 0.5em;
   }
 
+  .iconoRedes {
+    font-size: 4em;
+  }
 
-
+  .linkPath {
+    font-size: 0.9em;
+  }
 }
 
 @media only screen and (min-width:576px) and (max-width:991px) {
@@ -396,13 +407,8 @@
 
 
   .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
     background-position: 95% 50%;
-    background-repeat: no-repeat;
     background-size: 12em;
-    width: 100%;
   }
 
 
@@ -560,13 +566,8 @@
   }
 
   .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
     background-position: 85% center;
-    background-repeat: no-repeat;
     background-size: 17rem;
-    width: 100%;
   }
 
   .bloqueTransparente {
@@ -705,15 +706,7 @@
     text-align: left;
   }
 
-  .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
-    background-position: 85% center;
-    background-repeat: no-repeat;
-    background-size: 22rem;
-    width: 100%;
-  }
+
 
   .bloqueTransparente {
     height: 142vh;

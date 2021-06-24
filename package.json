@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
-    "animejs": "^3.2.1",
     "firebase": "^8.6.8",
     "letterizejs": "^2.0.1",
     "next": "10.2.3",
