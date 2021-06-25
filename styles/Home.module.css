@@ -617,8 +617,12 @@
   .bloqueProyectos {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10vh;
+    padding-top: 3vh;
 
+  }
+
+  .contenedorProyectos .contactoTexto {
+    margin-top: 1em;
   }
 
   .redes {
