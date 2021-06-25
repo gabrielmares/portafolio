@@ -767,6 +767,11 @@
     width: 100%;
   }
 
+  .contenedorProyectos .contactoTexto {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
   .bloqueProyectos {
     display: flex;
     flex-flow: row nowrap;
