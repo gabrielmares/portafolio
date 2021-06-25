@@ -6,7 +6,8 @@ import Bienvenida from '../components/MensajeBienvenida'
 import Dispositivo from '../components/Dispositivo'
 import TarjetaProyecto from '../components/TarjetaProyecto'
 import Proyectos, { redes } from '../projects'
-import ContactoTexto from '../components/Contacto'
+import Seccion from '../components/Seccion'
+import TituloContenedor from '../components/TituloContenedor'
 import Red from '../components/ContactoRedes'
 
 export default function Home() {
@@ -27,17 +28,29 @@ export default function Home() {
           </div>
         </BackGroundPage>
 
-
-        <div id='projects' className={styles.bloqueProyectos}>
-          {Proyectos.map((proyecto) => (
-            <TarjetaProyecto
-              key={proyecto.nombreAlterno}
-              proyecto={proyecto}
-            />
-          ))}
-        </div>
-        <div id='contact' className={styles.redes}>
-          <ContactoTexto />
+        <Seccion
+          id='projects'
+          clase={styles.redes}
+        >
+          <TituloContenedor
+            texto={'Portfolio'}
+          />
+          <div className={styles.bloqueProyectos}>
+            {Proyectos.map((proyecto) => (
+              <TarjetaProyecto
+                key={proyecto.nombreAlterno}
+                proyecto={proyecto}
+              />
+            ))}
+          </div>
+        </Seccion>
+        <Seccion
+          id='contact'
+          clase={styles.redes}
+        >
+          <TituloContenedor
+            texto={'Contact'}
+          />
           <div className={styles.contenedorRedes}>
             {redes.map((red) => (
               <Red
@@ -46,12 +59,8 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
+        </Seccion>
       </main>
-
-
-
-
     </div>
   )
 }
