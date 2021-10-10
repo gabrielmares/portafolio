@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+  --blues: #2489dc;
+  --imagenScroll: url('/stack.png')
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -17,7 +23,7 @@ a {
 }
 
 
-ul{
+ul {
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;

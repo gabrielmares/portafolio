@@ -4,10 +4,13 @@ import Encabezado from '../components/Encabezado'
 import BackGroundPage from '../components/FondoPrincipal'
 import Bienvenida from '../components/MensajeBienvenida'
 import Dispositivo from '../components/Dispositivo'
+import TarjetaProyecto from '../components/TarjetaProyecto'
+import Proyectos, { redes } from '../projects'
+import Seccion from '../components/Seccion'
+import TituloContenedor from '../components/TituloContenedor'
+import Red from '../components/ContactoRedes'
 
 export default function Home() {
-
-
   return (
     <div className={styles.container}>
       <Head>
@@ -19,29 +22,45 @@ export default function Home() {
       <main className={styles.main}>
         <Encabezado />
         <BackGroundPage>
-          <div className={styles.contenedor}>
+          <div id='about' className={styles.contenedor}>
             <Bienvenida />
             <Dispositivo />
           </div>
         </BackGroundPage>
 
-
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-        <div><h2>mensajes</h2></div>
-
+        <Seccion
+          id='projects'
+          clase={styles.contenedorProyectos}
+        >
+          <TituloContenedor
+            texto={'Portfolio'}
+          />
+          <div className={styles.bloqueProyectos}>
+            {Proyectos.map((proyecto) => (
+              <TarjetaProyecto
+                key={proyecto.nombreAlterno}
+                proyecto={proyecto}
+              />
+            ))}
+          </div>
+        </Seccion>
+        <Seccion
+          id='contact'
+          clase={styles.redes}
+        >
+          <TituloContenedor
+            texto={'Contact'}
+          />
+          <div className={styles.contenedorRedes}>
+            {redes.map((red) => (
+              <Red
+                key={red.link}
+                red={red}
+              />
+            ))}
+          </div>
+        </Seccion>
       </main>
-
-
     </div>
   )
 }

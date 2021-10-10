@@ -12,7 +12,6 @@
 }
 
 .encabezado {
-  flex: 1;
   display: flex;
   flex-direction: row;
   height: 30vh;
@@ -28,7 +27,7 @@
   flex-direction: row;
   margin-top: -6.5em;
   width: 100%;
-  height: 104.3vh;
+  height: 121vh;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #514A9D, #2489dc);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -53,20 +52,17 @@
   position: relative;
   flex: 2;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   align-content: flex-start;
-  margin: 1em 0 1em 0;
+  margin: 0.5em 0 0 0;
   letter-spacing: 0.08em;
   cursor: default;
   z-index: 1;
 }
 
 
-
 .enlaces a {
-  margin: 0 1.5em 0 1.5em;
-  font-size: 1.1em;
   letter-spacing: 0.05em;
 }
 
@@ -75,61 +71,15 @@
   text-decoration: underline;
 }
 
+
 .contenedor {
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: center;
   height: 100vh;
   width: 100%;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #005cc5;
-  border-color: #005cc5;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-}
 
 .textoBienvenida {
   display: flex;
@@ -142,6 +92,15 @@
   font-size: 72px;
 }
 
+.imagenScroll {
+  position: relative;
+  background: var(--imagenScroll);
+  background-attachment: fixed;
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  background-size: 22rem;
+  width: 100%;
+}
 
 .submensaje h4 {
   font-size: 2vw;
@@ -149,20 +108,147 @@
   font-weight: 400;
 }
 
+.submensaje a {
+  text-decoration: underline;
+}
+
+.contenedorProyectos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  color: var(--blues);
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloqueProyectos {
+  display: flex;
+  flex-flow: wrap;
+  background-color: white;
+  height: auto;
+  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloProyectos {
+  text-align: center;
+  font-size: 2em;
+}
+
+.tarjetaProyectos p {
+  margin-left: 0.8em;
+  color: black;
+  margin-right: 0.8em;
+  font-size: 1.1em;
+}
 
 
-@media only screen and (max-width: 600px) {
+.redes {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  color: var(--blues);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-  .grandiente {
-    margin-top: -7.9em;
-    height: 100vh;
+
+.gitBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(77, 77, 77);
+  width: 5rem;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 5px;
+  height: 1.4em;
+  display: flex;
+  border: 0.1em solid #FFFFFF;
+}
+
+.demo {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blues);
+  color: white;
+  width: 5rem;
+  font-size: 1.1em;
+  border-radius: 5px;
+  height: 1.4em;
+  display: flex;
+  border-color: var(--blues);
+  border: 0.1em solid #FFFFFF;
+}
+
+.iconoBoton {
+  margin: auto 0.3em auto 0;
+}
+
+.textoBoton {
+  margin: auto 0 auto 0;
+  font-size: 0.7em;
+}
+
+.demo:active {
+  background-color: #FFFFFF;
+  color: var(--blues);
+  border: 1px solid var(--blues)
+}
+
+.gitBoton:active {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(77, 77, 77);
+  color: rgb(77, 77, 77);
+}
+
+.tarjetaProyectos:hover {
+  transform: scale(1.05);
+}
+
+
+.contactoTexto {
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.contenedorRedes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.iconoRedes {
+  font-size: 5em;
+  cursor: pointer;
+}
+
+.linkPath {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 575px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .activo {
+    background-color: rgba(88, 84, 139, 0.384);
+    border-radius: 5px;
+    font-size: 1.1em;
   }
 
   .conGradiente,
   .encabezado {
+    flex: 1;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 1em;
+    padding-bottom: 0.3em;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -170,9 +256,29 @@
 
   .enlaces,
   .title {
-    padding-right: 0;
+    display: flex;
+    margin-top: 0;
     margin-right: auto;
     margin-left: auto;
+
+  }
+
+  .title {
+    font-size: 1.2em;
+  }
+
+  .enlaces a {
+    font-size: 0.75em;
+  }
+
+  .enlaces a:first-child {
+    margin-left: 4vw;
+    margin-right: 15vw;
+  }
+
+  .enlaces a:last-child {
+    margin-left: 15vw;
+    margin-right: 4vw;
   }
 
   .contenedor {
@@ -180,57 +286,275 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .contenedorProyectos .contactoTexto {
+    margin-top: 3em;
   }
 
   .textoBienvenida {
     flex: 1;
     align-items: center;
-    margin-bottom: 25vw;
+    margin-bottom: 5em;
   }
 
   .welcome {
-    font-size: 32px;
+    font-size: 2em;
     position: relative;
   }
 
   .submensaje {
     flex: 1;
     display: flex;
+    flex-direction: column;
+    margin-top: -1em;
   }
 
   .submensaje h4 {
-    width: 90vw;
+    width: 85vw;
     font-size: 0.85em;
     line-height: normal;
     text-align: center;
   }
 
+
+  .submensaje a {
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+  }
+
   .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
     background-position: center 65vh;
-    background-repeat: no-repeat;
-    background-size: 10rem;
-    width: 100%;
+    background-size: 50vw;
   }
 
 
   .bloqueTransparente {
+    height: 150vh;
+  }
+
+  .contenedorProyectos {
+    width: 100%;
+    height: 105vh;
+    /* padding-top: 5em; */
+  }
+
+  .bloqueProyectos {
+    flex-flow: wrap;
+    height: auto;
+    padding-bottom: 2em;
+    justify-content: space-evenly;
+  }
+
+  .redes {
     height: 100vh;
+    width: 100%;
+  }
+
+  .activo {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    background-color: rgba(88, 84, 139, 0.384);
+    border-radius: 5px;
+    font-size: 0.85em !important;
+  }
+
+  .tarjetaProyectos {
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    min-width: 8em;
+    height: 13.4em;
+    border: 1px solid var(--blues);
+    border-radius: 5px;
+  }
+
+
+  .tarjetaProyectos span {
+    position: relative;
+    color: var(--blues);
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tarjetaProyectos p {
+    font-size: 0.65em;
+  }
+
+  .tarjetaProyectos div {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5em;
+  }
+
+  .iconoRedes {
+    font-size: 4em;
+  }
+
+  .linkPath {
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:991px) {
+  .title {
+    margin-left: 6%;
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .conGradiente,
+  .encabezado {
+    height: 2em;
+    padding-top: 0.2em;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+
+  .enlaces {
+    margin-left: 2em;
+  }
+
+  .enlaces a {
+    font-size: 0.7em;
+  }
+
+  .enlaces a:first-child {
+    margin-right: 3vw;
+  }
+
+  .enlaces a:last-child {
+    margin-left: 3vw;
+    margin-right: 5vw;
+  }
+
+
+  .imagenScroll {
+    background-position: 95% 50%;
+    background-size: 12em;
+  }
+
+
+  .bloqueTransparente {
+    height: 130vh;
+  }
+
+  .contenedor {
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .welcome {
+    font-size: 2em;
+    margin-bottom: -0.7em;
+  }
+
+  .textoBienvenida {
+    margin-left: 7%;
+    flex: 1;
+    margin-top: 8vh;
+  }
+
+
+  .submensaje h4 {
+    width: 25em;
+    font-size: 0.8em;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .bloqueProyectos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tituloProyectos {
+    margin-top: 1em;
+  }
+
+  .redes {
+    height: 100vh;
+    width: 100%;
+
+  }
+
+  .contenedorProyectos .contactoTexto {
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+
+  .activo {
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    background-color: rgba(88, 84, 139, 0.384);
+    border-radius: 5px;
+    font-size: 0.8em !important;
+  }
+
+  .tarjetaProyectos {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    min-width: 12em;
+    height: 18em;
+    border: 1px solid var(--blues);
+    border-radius: 5px;
+  }
+
+
+  .tarjetaProyectos span {
+    position: relative;
+    color: var(--blues);
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tarjetaProyectos p {
+    font-size: 0.85em;
+  }
+
+  .tarjetaProyectos div {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5em;
+  }
+
+  .contactoTexto {
+    font-size: 3em;
   }
 
 
 }
 
-@media only screen and (min-width:601px) and (max-width:1024px) {
+@media only screen and (min-width:992px) and (max-width: 1440px) {
   .title {
     margin-left: 4%;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    margin-top: 0;
   }
 
   .conGradiente,
   .encabezado {
+    height: 3em;
+    padding-top: 0.2em;
     align-items: center;
     position: sticky;
     top: 0;
@@ -241,58 +565,31 @@
     font-size: 1em;
   }
 
-  .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
-    background-position: 90% 50%;
-    background-repeat: no-repeat;
-    background-size: 28vw;
-    width: 100%;
+  .enlaces a:first-child {
+    margin-right: 3vw;
   }
 
-
-  .bloqueTransparente {
-    height: 108vh;
+  .enlaces a:last-child {
+    margin-left: 3vw;
+    margin-right: 5vw;
   }
 
-  .welcome {
-    font-size: 6vw;
-    margin-bottom: -0.5em;
+  .contenedor {
+    flex: 1;
+    height: 100vh;
+    align-items: center;
   }
+
 
   .textoBienvenida {
     margin-left: 7%;
-    margin-top: 10vh;
-  }
-
-  .submensaje h4 {
-    width: 50vw;
-    font-size: 1em;
-    line-height: normal;
-    text-align: left;
-  }
-}
-
-@media only screen and (min-width:1024.1px) and (max-width: 1440px) {
-  .title {
-    margin-left: 8%;
-  }
-
-  .enlaces {
-    padding-right: 4%;
-    display: flex;
-    margin: auto;
-  }
-
-
-  .textoBienvenida {
-    margin-left: 7em;
-    margin-top: 3em;
+    flex: 1;
+    align-items: left;
+    margin-top: 15vh;
   }
 
   .welcome {
-    font-size: 60px !important;
+    font-size: 4.5vw;
     margin-bottom: -0.5em;
   }
 
@@ -303,18 +600,84 @@
     text-align: left;
   }
 
+  .submensaje a {
+    font-size: 1.2em;
+  }
+
   .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
     background-position: 85% center;
-    background-repeat: no-repeat;
     background-size: 17rem;
-    width: 100%;
   }
 
   .bloqueTransparente {
-    height: 108vh;
+    height: 142vh;
+  }
+
+
+  .bloqueProyectos {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10vh;
+
+  }
+
+  .redes {
+    height: 100vh;
+    width: 100%;
+  }
+
+
+  .tarjetaProyectos {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 19em;
+    min-width: 18em;
+    height: 24em;
+    border: 1px solid var(--blues);
+    border-radius: 5px;
+  }
+
+
+  .tarjetaProyectos span {
+    position: relative;
+    color: var(--blues);
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tarjetaProyectos p {
+    font-size: 1.1em;
+  }
+
+  .tarjetaProyectos div {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5em;
+  }
+
+  .gitBoton,
+  .demo {
+    height: 2em;
+    font-size: 1.5em;
+    justify-content: space-evenly;
+    width: 10vw;
+  }
+
+
+  .activo {
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    background-color: rgba(88, 84, 139, 0.384);
+    border-radius: 5px;
+    font-size: 1.1em !important;
+  }
+
+  .contactoTexto {
+    font-size: 3em;
   }
 
 }
@@ -323,32 +686,65 @@
 @media only screen and (min-width:1440.1px) {
   .title {
     margin-left: 8%;
+    font-size: 2.4em;
+    margin-top: 0;
+
   }
 
-  .enlaces {
-    padding-right: 4%;
-    display: flex;
-    margin: auto;
+  .conGradiente,
+  .encabezado {
+    height: 7vh;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
+
+
+  .enlaces a {
+    font-size: 1.4em;
+  }
+
+  .enlaces a:first-child {
+    margin-right: 3vw;
+  }
+
+  .enlaces a:last-child {
+    margin-left: 3vw;
+    margin-right: 5vw;
+  }
+
+  .contenedor {
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+  }
+
+
+  .textoBienvenida {
+    margin-left: 7%;
+    flex: 1;
+    align-items: left;
+    margin-top: 15vh;
+  }
 
   .welcome {
-    font-size: 80px !important;
+    font-size: 4.5vw;
     margin-bottom: -0.5em;
   }
 
-  .imagenScroll {
-    position: relative;
-    background: url('/express.png');
-    background-attachment: fixed;
-    background-position: 85% center;
-    background-repeat: no-repeat;
-    background-size: 22rem;
-    width: 100%;
+  .submensaje h4 {
+    width: 35vw;
+    font-size: 0.9rem;
+    line-height: normal;
+    text-align: left;
   }
 
+
+
   .bloqueTransparente {
-    height: 108vh;
+    height: 142vh;
   }
 
   .textoBienvenida {
@@ -364,4 +760,87 @@
     text-align: left;
   }
 
+  .submensaje a {
+    font-size: 1.4em;
+  }
+
+  .redes {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .contenedorProyectos .contactoTexto {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .bloqueProyectos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+
+  .tarjetaProyectos {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    min-width: 20em;
+    height: 28em;
+    border: 1px solid var(--blues);
+    border-radius: 5px;
+  }
+
+
+  .tarjetaProyectos span {
+    position: relative;
+    color: var(--blues);
+    margin-top: 0.5em;
+    font-size: 1.7em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tarjetaProyectos p {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    font-size: 1.3em;
+  }
+
+  .tarjetaProyectos:hover {
+    font-size: 1.05em;
+  }
+
+  .tarjetaProyectos:hover p {
+    font-size: 1.3em;
+  }
+
+  .tarjetaProyectos div {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+  }
+
+
+  .activo {
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    background-color: rgba(88, 84, 139, 0.384);
+    border-radius: 5px;
+    font-size: 1.5em !important;
+  }
+
+  .gitBoton,
+  .demo {
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    width: 8vw;
+    height: 1.7em;
+  }
+
+  .contactoTexto {
+    font-size: 3em;
+  }
 }
