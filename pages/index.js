@@ -49,7 +49,7 @@ export default function Home() {
           clase={styles.redes}
         >
           <TituloContenedor
-            texto={'Contact'}
+            texto={'Contact me!'}
           />
           <div className={styles.contenedorRedes}>
             {redes.map((red) => (
