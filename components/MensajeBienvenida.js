@@ -7,7 +7,7 @@ const Bienvenida = () => {
             <span className={styles.welcome}>Welcome</span>
             <div className={styles.submensaje}>
                 <h4>
-                    I'm Gabriel Mares, Frontend development
+                    I'm Gabriel Mares, Frontend developer
                     and this is my personal site, here you can
                     find repositories and demos about my jobs. {' '}
                     At the bottom you will find my
